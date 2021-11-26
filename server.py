@@ -12,7 +12,6 @@ def load():
 
 @app.route('/guess', methods=['POST'])
 def guess():
-    print(request.form['guess'])
     session['guess'] = int(request.form['guess'])
     return redirect('/playing')
 
